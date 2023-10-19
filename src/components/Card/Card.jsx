@@ -39,7 +39,7 @@ function Card(props) {
 }else if(props.name === 'HotelTheBest'){
   return(
     <div>
-         <RoseCard param={props} />  
+         <TheBestCard param={props} />  
     </div>
   )
 }
@@ -161,6 +161,56 @@ function OliveCard({ param }) {
         break;
       case 'oliveCheckOut':
         navigate("/oliveCheckOut")
+        break;
+      default:
+        alert("booking check");
+    }
+  }
+  const Png = param.png;
+  return (
+    <div className='CompactCard'
+      style={{
+        background: param.color.backGround,
+        boxShadow: param.color.boxShadow
+      }}
+      onClick={() => ToCheck(param.link)}
+    >
+    {console.log(param.link)}
+      <div className='redialBar'>
+        <CircularProgressbar
+          value={param.barValue}
+          text={`${param.barValue}%`} />
+          <span>{param.title}</span>
+      </div>
+      <div className='details'>
+        <Png />
+        <span>{param.value}</span>
+        <span>Last 24 hours</span>
+      </div>
+    </div>
+  )
+}
+
+function TheBestCard({ param }) {
+  const navigate = useNavigate();
+  const ToCheck = (link) =>{
+    console.log("THeBest links>>>>>>>>>>>>>>>",link);
+
+    switch (link) {
+      case 'TheBestBooking':
+        navigate("/theBestBookTable")
+        break;
+      case 'TheBestRooms':
+        navigate("/theBestRooms")
+        break;
+      case 'TheBestCheckin':
+        navigate("/theBestCheckIn")
+        break;
+      case 'memberShip':
+        navigate("/theBestMembers")
+        break;
+      case 'TheBestCheckOut':
+        navigate("/theBestCheckOut")
         break;
       default:
         alert("booking check");

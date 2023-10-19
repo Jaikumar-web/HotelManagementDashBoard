@@ -17,6 +17,11 @@ import KiaraBookTable from './components/Bookings/KiaraBooking';
 import KiaraCheckIn from './components/CheckInData/KiaraCheckIn';
 import KiaraCheckOut from './components/CheckOutData/KiaraCheckOuts';
 import KiaraRooms from './components/Rooms/KiaraRooms';
+// The Best Data
+import TheBestBookTable from './components/Bookings/TheBestBooking';
+import TheBestCheckIn from './components/CheckInData/TheBestCheckIn';
+import TheBestCheckOut from './components/CheckOutData/TheBestCheckOuts';
+import TheBestRooms from './components/Rooms/TheBestRooms';
 
 import HotelRosewood from './components/HotelRosewood/HotelRosewood';
 import HotelMoonLight from './components/HotelMoonLight/HotelMoonLight';
@@ -45,6 +50,11 @@ function App() {
     <Route path='/kiaraCheckOut' element={<KiaraCheckOut />}></Route>
     <Route path='/kiaraCheckIn' element={<KiaraCheckIn />}></Route>
     <Route path='/kiaraRooms' element={<KiaraRooms />}></Route>
+
+    <Route path='/theBestBookTable' element={<TheBestBookTable />}></Route>
+    <Route path='/theBestCheckOut' element={<TheBestCheckOut />}></Route>
+    <Route path='/theBestCheckIn' element={<TheBestCheckIn />}></Route>
+    <Route path='/theBestRooms' element={<TheBestRooms />}></Route>
 
     <Route path='/HotelRosewood' element={<HotelRosewood />}></Route>
     <Route path='/HotelMoonLight' element={<HotelMoonLight />}></Route>
