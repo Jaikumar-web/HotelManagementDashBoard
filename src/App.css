@@ -10,3 +10,46 @@
   --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
   --activeItem: #f799a354;
 }
+body{
+  margin: 0px;
+}
+
+.App{
+  background: linear-gradient(
+    to right,
+    #FF919D 29.63%,
+    #FAD79D 51.55%,
+    #f3c6f1 90.85%
+  );
+  font-family: 'Inter',sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.AppGlass{
+  display: grid;
+  height: 97%;
+  width: 97%;
+  border-radius: 2rem;
+  background-color: var(--glass);
+  overflow: hidden;
+  grid-template-columns: 11rem auto 16rem;
+}
+
+
+@media screen and (max-width: 1200px){
+  .AppGlass{
+    grid-template-columns: 10% 50% auto;
+    overflow-y: scroll;
+  }
+}
+@media screen and (max-width: 768px){
+  .AppGlass{
+    grid-template-columns: 1fr;
+  }
+  .AppGlass::-webkit-scrollbar{
+    display: none;
+  }
+}
